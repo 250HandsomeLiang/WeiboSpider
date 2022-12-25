@@ -16,7 +16,9 @@ class SearchSpider(Spider):
     """
     name = "search_spider"
     base_url = "https://s.weibo.com/"
-
+    locations=['龙华','南山']
+    disasters=['台风','暴雨']
+    words=[]
     def start_requests(self):
         """
         爬虫入口

@@ -7,8 +7,8 @@ Created Time: 2022/10/24
 import json
 
 import dateutil.parser
-
-
+import emoji
+import re
 def base62_decode(string):
     """
     base
@@ -118,3 +118,33 @@ def parse_long_tweet(response):
     item = response.meta['item']
     item['content'] = data['longTextContent']
     yield item
+
+def build_keyword(locations,disaster_type,keywords=None):
+    '''
+    关键字构造
+    :param locations 地址
+    :disaster_type   灾害类型
+    :keywords        其他关键字
+    '''
+    keys=[]
+    for loc in locations:
+        for disaster in disaster_type:
+            if keywords:
+                for words in keywords:
+                    keys.append(loc+" "+disaster+" "+words)
+            else:
+                keys.append(loc+" "+disaster)
+    return keys
+def emoji_filter(content):
+    '''
+    表情包过滤
+    '''
+    content=emoji.demojize(content)
+    print(content)
+    content=re.sub('\:(.*?)\:','',content)
+    print(content)
+    return content
+if __name__=='__main__':
+    keys=build_keyword(['龙华','南山','福田'],['台风','暴雨'])
+    print(keys)
+    emoji_filter('🍉电影《了不起的她》近日丽江开机\n根据张桂梅校长事迹改编\n主演：海清、胡歌（客串')

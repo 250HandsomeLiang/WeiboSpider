@@ -3,7 +3,7 @@ import datetime
 import json
 import os.path
 import time
-
+from utils.utils import emoji_filter
 
 class JsonWriterPipeline(object):
     """
@@ -23,6 +23,7 @@ class JsonWriterPipeline(object):
             now = datetime.datetime.now()
             file_name = spider.name + "_" + now.strftime("%Y%m%d%H%M%S") + '.jsonl'
             self.file = open(f'../output/{file_name}', 'wt', encoding='utf-8')
+        item['content']=emoji_filter(item['content'])
         item['crawl_time'] = int(time.time())
         line = json.dumps(dict(item), ensure_ascii=False) + "\n"
         self.file.write(line)
