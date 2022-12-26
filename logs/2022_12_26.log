@@ -1,0 +1,15 @@
+2022-12-26 11:28:08,452 -| root -| D:\BigData\LAB20221026\shenClimateDisaster\Spider\WeiboSpider\logs| INFO -| 测试
+2022-12-26 11:28:08,453 -| root -| D:\BigData\LAB20221026\shenClimateDisaster\Spider\WeiboSpider\logs| WARNING -| 测试
+2022-12-26 11:28:08,453 -| root -| D:\BigData\LAB20221026\shenClimateDisaster\Spider\WeiboSpider\logs| ERROR -| 测试
+2022-12-26 11:31:49,430 -| logger.py->__console -| INFO -| 测试
+2022-12-26 11:31:49,431 -| logger.py->__console -| WARNING -| 测试
+2022-12-26 11:31:49,432 -| logger.py->__console -| ERROR -| 测试
+2022-12-26 11:32:58,029 -| logger.py->__console -| INFO -| 试一试
+2022-12-26 11:33:20,464 -| logger.py->__console -| INFO -| 试一试
+2022-12-26 11:35:24,302 -| logger.py->__console -| line:35 [INFO] 测试
+2022-12-26 11:35:24,303 -| logger.py->__console -| line:39 [WARNING] 测试
+2022-12-26 11:35:24,303 -| logger.py->__console -| line:41 [ERROR] 测试
+2022-12-26 11:35:38,524 -| logger.py->__console -| line:35 [INFO] 试一试
+2022-12-26 11:44:25,804 -| logger.py-><module> -| line:42 [INFO] hello world
+2022-12-26 11:44:25,806 -| logger.py-><module> -| line:43 [WARNING] 无敌
+2022-12-26 11:45:14,768 -| utils.py-><module> -| line:15 [INFO] 警告

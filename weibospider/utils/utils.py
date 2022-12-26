@@ -1,5 +1,6 @@
 import emoji
 import re
+from logger import log
 def emoji_filter(content):
     '''
     表情包过滤
